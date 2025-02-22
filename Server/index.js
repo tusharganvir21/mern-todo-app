@@ -7,7 +7,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect('mongodb://127.0.0.1:27017/test');
+// mongoose.connect('mongodb://127.0.0.1:27017/test');
+mongoose.connect('mongodb+srv://tusharganvir1234:Pass1234@cluster0.7p0l9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', { useNewUrlParser: true, useUnifiedTopology: true });
 
 app.get('/get', (req, res) => {
     TodoModel.find()
