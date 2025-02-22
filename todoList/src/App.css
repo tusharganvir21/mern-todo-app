@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #1a1a1d;  
+  color: #f8f8f8; 
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6);  
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 600px; 
+}
+
+.heading {
+  font-size: 45px;
+  color: #ff4081;
+  margin-bottom: 20px;
+}
+
+.no-record {
+  font-size: 45px;
+  color: #ff93b7;
+  margin-bottom: 20px;
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.418);
+}
+
+.create-form {
+  display: flex;
+  margin-bottom: 20px;
+  width: 100%;
+  justify-content: center;
+}
+
+.create-form input {
+  width: 300px;
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  border-bottom: 2px solid #ff4081;
+  background: transparent;
+  color: white;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.create-form input:focus {
+  border-color: #f50057;
+}
+
+.create-form button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  font-size: 20px;
+  background-color: #ff4081;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.create-form button:hover {
+  background-color: #f50057;
+}
+
+.task {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 345px;
+  justify-content: space-between;
+  background: rgba(255, 64, 129, 0.1);
+  color: white;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.line-through {
+  text-decoration: line-through;
+  color: #bdbdbd;
+}
+
+.checkbox .icon {
+  margin-right: 5px;
+  font-size: 18px;
+  color: #ff4081;
+}
+
+.task div span {
+  margin: 0 5px;
+}
+
+.task div .icon {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.task div .icon:hover {
+  color: #f50057;
+}
+
+.footer {
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.footer-name {
+  color: #ff74a3;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 16px;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Code for Responsive Design */
+@media (max-width: 768px) {
+  .home {
+    padding: 15px;
+  }
+
+  .heading {
+    font-size: 36px;
+  }
+
+  .create-form input {
+    width: 100%; 
+  }
+
+  .task {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .create-form button {
+    width: 100%; 
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 30px;
+  }
+
+  .create-form input {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .create-form button {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .task {
+    width: 100%;
+    padding: 8px;
+  }
+
+  .checkbox .icon {
+    font-size: 16px;
+  }
+
+  .task div .icon {
+    font-size: 16px;
+  }
+}
