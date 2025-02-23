@@ -7,7 +7,7 @@ function Create( {onTaskAdded} ) {
     const handleAdd = () => {
       if(!task.trim()) return;
 
-        axios.post(`${import.meta.env.BACKEND_URL}/add`, {task: task})
+        axios.post(`${import.meta.env.VITE_BACKEND_URL}/add`, {task: task})
         .then(result => {
           // location.reload()   
            onTaskAdded(result.data);
