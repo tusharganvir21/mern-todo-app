@@ -10,7 +10,7 @@ function Home() {
     axios
       .get(`${import.meta.env.VITE_BACKEND_URL}/get`)
       .then((result) => {
-        console.log(result.data);
+        // console.log(result.data);
         setTodos(result.data);
       })
       .catch((err) => console.log(err));
