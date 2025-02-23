@@ -6,9 +6,7 @@ const cors = require('cors');
 const TodoModel = require('./Models/Todo')
 
 const app = express();
-app.use(cors({
-    origin:'https://mern-todo-app-qx37.vercel.app/',
-}));
+app.use(cors());
 app.use(express.json());
 
 dotenv.config();
