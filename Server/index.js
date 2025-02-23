@@ -1,3 +1,5 @@
+const dotenv = require('dotenv');
+
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -7,8 +9,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+dotenv.config();
 // mongoose.connect('mongodb://127.0.0.1:27017/test');
-mongoose.connect('mongodb+srv://tusharganvir1234:Pass1234@cluster0.7p0l9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGODB_URI);
 
 app.get('/get', (req, res) => {
     TodoModel.find()
