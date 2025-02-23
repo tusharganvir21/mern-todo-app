@@ -7,14 +7,14 @@ function Home() {
     const [todos, setTodos] = useState([]);
 
     useEffect(() => {
-      axios.get('http://localhost:3001/get')
+      axios.get(`${import.meta.env.BACKEND_URL}/get`)
       .then(result => setTodos(result.data))
       .catch(err => console.log(err)
       )
     },[]);
 
     const handleEdit = (id) => {
-      axios.put('http://localhost:3001/update/'+id)
+      axios.put(`${import.meta.env.BACKEND_URL}/update/`+id)
       .then(result => {
         // location.reload()
         setTodos(prevTodos =>
@@ -27,7 +27,7 @@ function Home() {
     }
 
     const handleDelete = (id) => {
-      axios.delete('http://localhost:3001/delete/'+id)
+      axios.delete(`${import.meta.env.BACKEND_URL}/delete/`+id)
       .then(result => {
         // location.reload()
         setTodos(prevTodos => prevTodos.filter(todo => todo._id !== id));
